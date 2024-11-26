@@ -14,5 +14,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 - Update issue templates.
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/0.0.1...HEAD
-[0.0.1]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/0.0.1
+[Unreleased]: https://github.com/bert-cafecito/millennium-scraper/compare/0.0.1...HEAD
+[0.0.1]: https://github.com/bert-cafecito/millennium-scraper/releases/tag/0.0.1
