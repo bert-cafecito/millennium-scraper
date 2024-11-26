@@ -23,19 +23,38 @@ class YugiohDBCardsSpider(scrapy.Spider):
         product_urls = response.css("div.pack_en").css("input.link_value::attr(value)").getall()
         # Let's count the number of product URLs
         product_count = len(product_urls)
+        # Log the number of products found on the page
         self.logger.info(f"Found {product_count} products on the page")
 
         # Loop through each product URL
         # Let's folllow the product URL to get more details
         for product_url in product_urls[:5]:
+            # Make a request to the product URL
             yield response.follow(product_url, self.parse_product)
 
     def parse_product(self, response):
+        # Extract the product name
+        extracted_product_name = response.css("header#broad_title").css("strong::text").get()
+
+        # Check if the product name is a valid string
+        if extracted_product_name:
+            # Strip the product name of leading and trailing whitespaces and capitalize the first letter of each word
+            extracted_product_name = extracted_product_name.strip().title()
+
+        # Log the extracted product name
+        self.logger.info(f"Extracting cards from product name: {extracted_product_name}")
+
         # Get all the card URLs on the product page
         card_urls = response.css("div#card_list.list").css("div.t_row.c_normal.open").css("input.link_value::attr(value)").getall()
         # Let's count the number of card URLs
         card_count = len(card_urls)
+        # Log the number of cards found on the product page
         self.logger.info(f"Found {card_count} cards on the product page")
+
+        # If the card count is 0, skip the product
+        if card_count == 0:
+            self.logger.info("Skipping product due to lack of cards")
+            return
 
         # Loop through each card URL
         # Let's folllow the card URL to get more details
