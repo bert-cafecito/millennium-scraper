@@ -1,3 +1,9 @@
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
 # Scrapy settings for millennium_scraper project
 #
 # For simplicity, this file contains only settings considered important or
@@ -14,7 +20,7 @@ NEWSPIDER_MODULE = "millennium_scraper.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "millennium_scraper (+http://www.yourdomain.com)"
+USER_AGENT = os.getenv("USER_AGENT", "example (+http://www.example.com)")
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
