@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 - Update project description in the readme file.
 - Add support section in the readme file.
+- Update .gitignore to ignore `logs` and `outputs` directory.
 
 ## [0.0.1] - 2024-11-26
 
