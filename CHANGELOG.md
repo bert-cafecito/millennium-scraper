@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+- Add `.devcontainer` configuration for Visual Studio Code.
+- Add Scrapy version 2.12.0 in the requirements file.
+
 ### Changed
 - Update project description in the readme file.
 - Add support section in the readme file.
