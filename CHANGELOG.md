@@ -34,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add a reporting issues section in the readme file.
 - Add a star the repository section in the readme file.
 - Add a license section in the readme file.
+- Add a configuration section in the readme file.
 
 ## [0.0.1] - 2024-11-26
 

@@ -41,6 +41,33 @@ Creating a virtual environment is an important step in managing dependencies for
 
 5. **Security**: Isolating dependencies in a virtual environment can also enhance security by reducing the risk of dependency conflicts and ensuring that your project uses only the packages it needs.
 
+## Configuration
+
+This project uses environment variables to configure various settings. You can set these variables in a `.env` file in the root directory of the project. An example `.env` file is provided as `.env.example`.
+
+    ```properties
+    BOT_NAME=millennium_scraper
+    CONCURRENT_REQUESTS_PER_IP=8
+    DOWNLOAD_DELAY=0
+    LOG_ENABLED=True
+    LOG_FILE=logs/scrapy.log
+    LOG_LEVEL=INFO
+    ROBOTSTXT_OBEY=True
+    TELNETCONSOLE_ENABLED=False
+    USER_AGENT=millennium_scraper (+https://github.com/bert-cafecito/millennium-scraper)
+    ```
+
+### Using the .env File
+
+1. Copy the .env.example file to .env:
+    ```sh
+    cp .env.example .env
+    ```
+
+2. Modify the .env file to suit your needs.
+
+The environment variables in the .env file will be loaded automatically when you run the project.
+
 ## Usage
 
 ### Crawling Responsibly
