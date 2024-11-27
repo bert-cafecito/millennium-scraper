@@ -13,7 +13,7 @@ load_dotenv()
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "millennium_scraper"
+BOT_NAME = os.getenv("BOT_NAME", "shadow_realm_scraper")
 
 SPIDER_MODULES = ["millennium_scraper.spiders"]
 NEWSPIDER_MODULE = "millennium_scraper.spiders"
@@ -23,7 +23,7 @@ NEWSPIDER_MODULE = "millennium_scraper.spiders"
 USER_AGENT = os.getenv("USER_AGENT", "example (+http://www.example.com)")
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = os.getenv("ROBOTSTXT_OBEY", True)
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -31,16 +31,16 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = os.getenv("DOWNLOAD_DELAY", 3)
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
-#CONCURRENT_REQUESTS_PER_IP = 16
+CONCURRENT_REQUESTS_PER_IP = os.getenv("CONCURRENT_REQUESTS_PER_IP", 16)
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
-#TELNETCONSOLE_ENABLED = False
+TELNETCONSOLE_ENABLED = os.getenv("TELNETCONSOLE_ENABLED", 16)
 
 # Override the default request headers:
 #DEFAULT_REQUEST_HEADERS = {
@@ -96,3 +96,10 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+# Enable and configure the Logging extension
+# See https://docs.scrapy.org/en/latest/topics/logging.html
+LOG_ENABLED = os.getenv("LOG_ENABLED", True)
+LOG_FILE = os.getenv("LOG_FILE", "scrapy.log")
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+
