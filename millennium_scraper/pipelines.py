@@ -5,11 +5,23 @@
 
 
 # useful for handling different item types with a single interface
+from datetime import datetime, timezone
 from itemadapter import ItemAdapter
 
 
 class MillenniumScraperPipeline:
+    def open_spider(self, spider):
+        # Set date to the current date UTC
+        # Date format: YYYY-MM-DD
+        self.current_date_utc = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+
     def process_item(self, item, spider):
+        # Create an ItemAdapter for the item
+        adapter = ItemAdapter(item)
+
+        # Add extracted date to the item
+        adapter["extracted_date"] = self.current_date_utc
+
         return item
     
 class CardPipeline:

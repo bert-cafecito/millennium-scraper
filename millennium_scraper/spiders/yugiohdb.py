@@ -16,7 +16,8 @@ class YugiohDBCardsSpider(scrapy.Spider):
             }
         },
         "ITEM_PIPELINES": {
-            "millennium_scraper.pipelines.CardPipeline": 100
+            "millennium_scraper.pipelines.CardPipeline": 100,
+            "millennium_scraper.pipelines.MillenniumScraperPipeline": 200
         },
         "LOG_FILE": f"logs/{source}/cards.log"
     }
