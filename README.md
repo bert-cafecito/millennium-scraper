@@ -8,6 +8,8 @@ This project scrapes data from the following sources:
 
 1. [**Yu-Gi-Oh! Card Database**](https://www.db.yugioh-card.com/yugiohdb/): The official database for all Yu-Gi-Oh! cards, providing comprehensive information about each card, including card name, type, attribute, level/rank, attack/defense points, and card text.
 
+*Note: I do not own Yu-Gi-Oh! All rights to Yu-Gi-Oh! are owned by their respective owners.*
+
 ## Installation
 
 1. Clone the repository:
