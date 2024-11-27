@@ -10,6 +10,10 @@ This project scrapes data from the following sources:
 
 *Note: I do not own Yu-Gi-Oh! All rights to Yu-Gi-Oh! are owned by their respective owners.*
 
+## Changelog
+
+This project maintains a [changelog](CHANGELOG.md) to document all notable changes. Please refer to it for detailed information on updates and modifications.
+
 ## Installation
 
 1. Clone the repository:
