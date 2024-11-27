@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.0.2] - 2024-11-26
+
 ### Added
 - Add `.devcontainer` configuration for Visual Studio Code.
 - Add Scrapy version 2.12.0 in the requirements file.
@@ -45,5 +47,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 - Update issue templates.
 
-[Unreleased]: https://github.com/bert-cafecito/millennium-scraper/compare/0.0.1...HEAD
+[Unreleased]: https://github.com/bert-cafecito/millennium-scraper/compare/0.0.2...HEAD
+[0.0.2]: https://github.com/bert-cafecito/millennium-scraper/releases/tag/0.0.2
 [0.0.1]: https://github.com/bert-cafecito/millennium-scraper/releases/tag/0.0.1
