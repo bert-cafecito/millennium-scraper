@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add scrapy framework.
 - Add python-dotenv version 1.0.1 in the requirements file.
 - Add `YugiohDBCardsSpider` spider to scrap card details from `yugioh-card.com`.
+- Add an extracted_date based on UTC timezone.
 
 ### Changed
 - Update project description in the readme file.
